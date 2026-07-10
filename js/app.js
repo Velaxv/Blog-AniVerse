@@ -48,23 +48,49 @@ const app = {
     const hero = document.getElementById('hero-post');
     if (hero) hero.innerHTML = templates.hero(featured);
 
+    // Feed: outros posts (sem repetir o destaque)
+    const feedPosts = posts.filter((p) => !featured || p.id !== featured.id);
     const filterBar = document.getElementById('filter-bar');
-    if (filterBar) filterBar.innerHTML = templates.categories(categories, 'all');
-
+    const sectionHeader = document.querySelector('.posts-feed .section-header');
     const grid = document.getElementById('posts-grid');
+    const seeAll = document.querySelector('.posts-feed .see-all');
+
+    // Com poucos posts, simplifica a home (sem chips vazios / "ver todos")
+    if (posts.length <= 2) {
+      if (filterBar) filterBar.hidden = true;
+      if (seeAll) seeAll.hidden = true;
+    } else if (filterBar) {
+      filterBar.hidden = false;
+      filterBar.innerHTML = templates.categories(categories, 'all');
+    }
+
     const render = (list) => {
       if (!grid) return;
-      grid.innerHTML = list.length
-        ? list.map((p) => templates.postCard(p)).join('')
-        : templates.emptyState('Nenhum post nesta categoria.');
+      if (!list.length) {
+        grid.innerHTML = templates.comingSoon();
+        if (sectionHeader) {
+          const title = sectionHeader.querySelector('.section-title');
+          if (title) title.textContent = '✨ Próximos passos';
+        }
+        return;
+      }
+      if (sectionHeader) {
+        const title = sectionHeader.querySelector('.section-title');
+        if (title) title.textContent = '🔥 Posts recentes';
+      }
+      grid.innerHTML = list.map((p) => templates.postCard(p)).join('');
     };
 
     filters.activeCategory = 'all';
-    filters.init(() => render(filters.apply(posts)));
-    render(posts);
+    filters.init(() => {
+      const base = filters.activeCategory === 'all'
+        ? feedPosts
+        : posts.filter((p) => p.category === filters.activeCategory);
+      render(filters.apply(base.length ? base : posts));
+    });
+    render(feedPosts);
 
-    // In-page category chips on home: filter without leaving
-    if (filterBar) {
+    if (filterBar && !filterBar.hidden) {
       filterBar.querySelectorAll('.cat-chip').forEach((chip) => {
         chip.addEventListener('click', (e) => {
           e.preventDefault();
@@ -72,7 +98,11 @@ const app = {
           filterBar.querySelectorAll('.cat-chip').forEach((c) => {
             c.classList.toggle('active', c === chip);
           });
-          render(filters.apply(posts));
+          const list =
+            filters.activeCategory === 'all'
+              ? feedPosts
+              : posts.filter((p) => p.category === filters.activeCategory);
+          render(list);
         });
       });
     }
@@ -85,12 +115,6 @@ const app = {
 
     const news = document.getElementById('newsletter-widget');
     if (news) news.innerHTML = templates.newsletterWidget();
-
-    // Header newsletter (if present as shell)
-    const headerNews = document.querySelector('header #newsletter-widget');
-    if (headerNews && !headerNews.querySelector('form')) {
-      headerNews.innerHTML = templates.newsletterWidget();
-    }
   },
 
   async post() {
@@ -128,18 +152,21 @@ const app = {
     if (news) news.innerHTML = templates.newsletterWidget();
 
     const related = document.getElementById('related-grid');
+    const relatedSection = document.querySelector('.related-section');
     if (related) {
       const all = await AniAPI.getPosts();
       const list = all
         .filter((p) => p.id !== post.id && p.category === post.category)
         .slice(0, 3);
-      related.innerHTML = list.length
-        ? list.map((p) => templates.postCard(p)).join('')
-        : all
-            .filter((p) => p.id !== post.id)
-            .slice(0, 3)
-            .map((p) => templates.postCard(p))
-            .join('');
+      const fallback = all.filter((p) => p.id !== post.id).slice(0, 3);
+      const final = list.length ? list : fallback;
+      if (!final.length) {
+        if (relatedSection) relatedSection.hidden = true;
+        related.innerHTML = '';
+      } else {
+        if (relatedSection) relatedSection.hidden = false;
+        related.innerHTML = final.map((p) => templates.postCard(p)).join('');
+      }
     }
   },
 
