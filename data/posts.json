@@ -5,14 +5,61 @@
     "url": "https://aniverseanime.netlify.app"
   },
   "categories": [
-    { "id": "all", "name": "Todos", "icon": "🌌" },
-    { "id": "reviews", "name": "Reviews", "icon": "⭐" },
-    { "id": "episodios", "name": "Episódios", "icon": "🎬" },
-    { "id": "mangas", "name": "Mangás", "icon": "📖" },
-    { "id": "noticias", "name": "Notícias", "icon": "📰" },
-    { "id": "teorias", "name": "Teorias", "icon": "🔮" }
+    {
+      "id": "all",
+      "name": "Todos",
+      "icon": "🌌"
+    },
+    {
+      "id": "reviews",
+      "name": "Reviews",
+      "icon": "⭐"
+    },
+    {
+      "id": "episodios",
+      "name": "Episódios",
+      "icon": "🎬"
+    },
+    {
+      "id": "mangas",
+      "name": "Mangás",
+      "icon": "📖"
+    },
+    {
+      "id": "noticias",
+      "name": "Notícias",
+      "icon": "📰"
+    },
+    {
+      "id": "teorias",
+      "name": "Teorias",
+      "icon": "🔮"
+    }
   ],
   "posts": [
+    {
+      "id": "legado-romance-dawn-one-piece",
+      "title": "O Legado de Romance Dawn: Como o Primeiro Capítulo de One Piece Mudou a História",
+      "slug": "legado-romance-dawn-one-piece",
+      "excerpt": "Em 1997, o primeiro capítulo de One Piece — Romance Dawn — nasceu na Weekly Shōnen Jump. Uma análise do começo que plantou todas as sementes do maior épico dos mangás.",
+      "content": "<p>Em 1997, um mangá surgiu nas páginas da <strong>Weekly Shōnen Jump</strong> e mudou para sempre a indústria de mangás e animes. Seu nome: <strong>One Piece</strong>. Mas antes de se tornar o mangá mais vendido da história, ele precisava de um começo — e que começo.</p>\n<p>O primeiro capítulo, originalmente intitulado <strong>\"Romance Dawn\"</strong> (Alvorada Romântica), não é apenas uma introdução. É uma declaração de intenções, um mapa de tudo que viria a seguir, e uma história completa em si mesma que já carrega todas as sementes do épico que se tornaria.</p>\n\n<figure class=\"post-figure\">\n  <img src=\"images/posts/romance-dawn/vila-foosha.jpg\" alt=\"Vila costeira inspirada em Foosha, East Blue\" loading=\"lazy\" width=\"1200\" height=\"675\">\n  <figcaption>Uma vila tranquila no East Blue — o cenário onde a grande aventura começa.</figcaption>\n</figure>\n\n<h2>O Mundo Antes de Luffy</h2>\n<p>A história começa com uma revelação crucial: <strong>Gol D. Roger</strong>, o Rei dos Piratas, acaba de ser executado pelo Governo Mundial. Suas últimas palavras tornaram-se lenda:</p>\n<blockquote>\n  <p>\"Meu tesouro? Se quiserem, podem pegá-lo. Procurem-no! Ele contém tudo que este mundo pode oferecer!\"</p>\n</blockquote>\n<p>Essas palavras desencadearam a <strong>Grande Era dos Piratas</strong>. Milhares de pessoas partiram para o mar em busca do tesouro lendário: o <em>One Piece</em>. Roger sabia que ia morrer, mas transformando sua execução em um espetáculo público, ele estrategicamente soltou uma semente que germinaria por décadas.</p>\n<p>Este é o mundo que Luffy herda. Um mundo onde ser pirata não é apenas um crime — é uma aspiração. Onde o mar representa liberdade absoluta. Onde o título de \"Rei dos Piratas\" carrega poder, mistério e um magnetismo irresistível.</p>\n\n<h2>Shanks e os Piratas do Ruivo</h2>\n<p>Na tranquila vila de Foosha, no East Blue, observamos uma tripulação peculiar: os <strong>Piratas do Ruivo</strong>, liderados pelo carismático Shanks, um capitão que prefere bebida e festas a brigas — pelo menos na maioria das vezes.</p>\n<p>O que torna Shanks interessante não é apenas sua força (que é claramente descomunal, embora mal a vejamos neste capítulo), mas sua filosofia. Ele é um pirata pacífico e que não se deixa levar por provocações fúteis. Este código de honra ecoará através de toda a história de One Piece.</p>\n<p>Shanks e sua tripulação fizeram da vila sua base por quase um ano. Por quê? Talvez fosse o destino de conhecer o menino que mudaria tudo.</p>\n\n<h2>Luffy: A Semente do Futuro Rei</h2>\n<p>Entre as idas e vindas da tripulação, conhecemos <strong>Monkey D. Luffy</strong> — um menino de apenas 7 anos que passa os dias na taverna de Makino, uma jovem gentil que serve como uma figura maternal para ele.</p>\n<p>A introdução de Luffy já estabelece os pilares do seu personagem:</p>\n<ul>\n  <li><strong>Inocência absoluta:</strong> Ele é apenas uma criança e não compreende a complexidade do mundo adulto.</li>\n  <li><strong>Ambição desproporcional:</strong> Ele quer ser um pirata a todo custo, acreditando ser a coisa mais legal do mundo.</li>\n  <li><strong>Coragem inconsequente:</strong> Luffy não tem noção de autopreservação. Ele fere o próprio rosto sob o olho para provar que é durão.</li>\n  <li><strong>Coração puro:</strong> Ele sente as dores dos outros e odeia ver seus heróis sendo humilhados.</li>\n</ul>\n<p>O momento definidor ocorre quando Higuma, um bandido da montanha, invade a taverna e humilha Shanks, que não revida. Luffy, irritado com a \"covardia\" de seu ídolo, come frustrado uma fruta estranha que os piratas guardavam em um baú. Sem saber, ele engole a <strong>Gomu Gomu no Mi</strong> (Fruta da Borracha), uma Akuma no Mi que o transforma em um homem de borracha e tira sua capacidade de nadar.</p>\n\n<figure class=\"post-figure\">\n  <img src=\"images/posts/romance-dawn/sacrificio-mar.jpg\" alt=\"Cena dramática no mar: sacrifício e proteção\" loading=\"lazy\" width=\"1200\" height=\"675\">\n  <figcaption>No mar, o preço de proteger quem importa se revela — e muda Luffy para sempre.</figcaption>\n</figure>\n\n<h2>O Sacrifício</h2>\n<p>A cena mais impactante do capítulo acontece quando Luffy resolve confrontar Higuma sozinho para defender a honra de Shanks. Naturalmente, um menino de 7 anos contra um bandido adulto é um desastre. Quando Shanks e sua tripulação intervêm e derrotam os bandidos com uma facilidade assustadora, Higuma foge para o mar levando Luffy como refém.</p>\n<p>No mar, Higuma é devorado pelo Senhor da Costa (um monstro marinho), e Luffy é jogado à própria sorte, prestes a ser engolido também. É então que Shanks surge no último segundo, afugentando o monstro apenas com seu olhar (um vislumbre do Haki).</p>\n<p>Mas o preço do resgate foi alto: o monstro arrancou o braço esquerdo de Shanks.</p>\n<p>Luffy cai em prantos ao perceber o sacrifício de seu herói. Shanks, sorrindo gentilmente, diz: <em>\"É só um braço. Que bom que você está a salvo.\"</em> Ele perde algo precioso para salvar um menino, provando que a verdadeira força de um pirata está em proteger o que importa, e não em brigas de bar.</p>\n\n<figure class=\"post-figure\">\n  <img src=\"images/posts/romance-dawn/chapeu-promessa.jpg\" alt=\"Chapéu de palha sobre barril no porto, símbolo de promessa\" loading=\"lazy\" width=\"1200\" height=\"675\">\n  <figcaption>O chapéu de palha: mais que um acessório — uma promessa entre gerações.</figcaption>\n</figure>\n\n<h2>O Chapéu de Palha: A Promessa</h2>\n<p>No momento da despedida, quando os Piratas do Ruivo estão prestes a deixar a vila para sempre, Luffy declara que superará Shanks e se tornará o Rei dos Piratas.</p>\n<p>Shanks, reconhecendo o espírito de Gol D. Roger no garoto, faz algo que mudará completamente o destino de Luffy: ele coloca seu próprio chapéu de palha na cabeça do menino.</p>\n<blockquote>\n  <p>\"Estou deixando este chapéu com você. É meu chapéu precioso. Devolva-o para mim algum dia, quando se tornar um grande pirata.\"</p>\n</blockquote>\n<p>Este gesto aparentemente simples carrega um peso massivo:</p>\n<ul>\n  <li><strong>Confiança e Promessa:</strong> Shanks acredita que Luffy alcançará o topo, e o chapéu é a garantia de que eles se reencontrarão.</li>\n  <li><strong>Símbolo de Liberdade:</strong> O chapéu passa a representar o mar, a aventura e a própria identidade de Luffy.</li>\n  <li><strong>Herança:</strong> É a passagem de bastão para a próxima geração.</li>\n</ul>\n\n<h2>O Legado de \"Romance Dawn\"</h2>\n<p>O gênio de <strong>Romance Dawn</strong> está em sua simplicidade estratégica. Eiichiro Oda conseguiu:</p>\n<ul>\n  <li><strong>Estabelecer o tom:</strong> One Piece será divertido, emocional e cheio de coração.</li>\n  <li><strong>Definir os temas centrais:</strong> Amizade, sacrifício, a busca pelos sonhos e a verdadeira liberdade.</li>\n  <li><strong>Criar um protagonista cativante:</strong> Luffy é carismático, leal e destemido.</li>\n  <li><strong>Plantar mistérios:</strong> O que é o One Piece? Quais são os limites das Akuma no Mi?</li>\n</ul>\n<p>Este primeiro capítulo estabeleceu as bases para mais de mil capítulos, milhares de episódios e uma franquia colossal. Mais importante ainda: criou um universo onde sonhos importam mais que o poder, onde a amizade é a maior força motriz e onde um garoto com um chapéu de palha pode, de fato, virar o mundo de cabeça para baixo.</p>\n<p><strong>A Alvorada Romântica de Luffy começou ali. E que início glorioso foi.</strong></p>",
+      "cover": "images/posts/romance-dawn/cover.jpg",
+      "category": "mangas",
+      "tags": [
+        "one piece",
+        "romance dawn",
+        "mangá",
+        "oda",
+        "análise",
+        "luffy",
+        "shanks"
+      ],
+      "date": "2026-07-10",
+      "author": "AniVerse",
+      "featured": true,
+      "popular": true,
+      "type": "manga"
+    },
     {
       "id": "solo-leveling-s2-review",
       "title": "Solo Leveling Temporada 2: O retorno do Caçador que muda o jogo",
@@ -21,10 +68,15 @@
       "content": "<p>A temporada 2 de <strong>Solo Leveling</strong> chega com a missão de justificar o status de fenômeno global — e, na maior parte do tempo, ela consegue.</p><p>Desde o primeiro episódio, o salto de produção é evidente: coreografias de luta mais fluidas, monstruosidades com design marcante e um ritmo que alterna bem entre tensão e espetáculo.</p><h3>O que funciona</h3><p>Jin-Woo deixa de ser só “o cara fraco que ficou forte” e ganha camadas de presença. As dungeons, os monarcas e o sistema de power-up continuam viciantes — aquele loop clássico de RPG que o manhwa popularizou.</p><h3>Pontos de atenção</h3><p>Quem espera drama emocional denso pode achar o foco ainda muito centrado em ação. Mesmo assim, para o público shounen/isekai de poder, a temporada entrega.</p><p><strong>Nota AniVerse:</strong> 9.0/10 — recomendadíssimo se você gosta de progressão, combate e vibe de caçador solitário.</p>",
       "cover": "https://picsum.photos/seed/sololeveling/1200/630",
       "category": "reviews",
-      "tags": ["solo leveling", "ação", "shounen", "temporada 2"],
+      "tags": [
+        "solo leveling",
+        "ação",
+        "shounen",
+        "temporada 2"
+      ],
       "date": "2026-07-08",
       "author": "AniVerse",
-      "featured": true,
+      "featured": false,
       "popular": true,
       "type": "anime"
     },
@@ -36,7 +88,12 @@
       "content": "<p>Alguns episódios de <strong>Jujutsu Kaisen</strong> são “só bons”. Este não — ele reorganiza o tabuleiro do Culling Game.</p><p>A direção usa silêncios e cortes secos para aumentar o peso de cada decisão. Quando a ação explode, o contraste fica ainda mais forte.</p><h3>Personagens em foco</h3><p>Sem spoilers pesados: o episódio reforça o tema central da obra — o preço do poder e o custo de proteger quem se ama dentro de um sistema injusto de feitiçaria.</p><h3>Animação e trilha</h3><p>A MAPPA continua em modo showreel. Efeitos de maldição, framing e trilha sonora empurram a cena para o nível “vale reassistir em câmera lenta”.</p><p>Se você está em dia com o mangá, o impacto é diferente; se só acompanha o anime, prepare o coração.</p>",
       "cover": "https://picsum.photos/seed/jujutsu/1200/630",
       "category": "episodios",
-      "tags": ["jujutsu kaisen", "mappa", "análise", "shounen"],
+      "tags": [
+        "jujutsu kaisen",
+        "mappa",
+        "análise",
+        "shounen"
+      ],
       "date": "2026-07-06",
       "author": "AniVerse",
       "featured": false,
@@ -51,10 +108,15 @@
       "content": "<p>O arco de <strong>Egghead</strong> não é só “luta com robôs”. É um depósito de lore — e Eiichiro Oda sabe exatamente o que está plantando.</p><p>Entre gravações de Vegapunk, menções ao século perdido e a presença de figuras do Governo Mundial, a sensação é de que estamos a poucos arcos de uma virada histórica.</p><h3>Hipótese central</h3><p>A tecnologia de Egghead pode não ser “avanço moderno”, mas <em>recuperação</em> de algo que o mundo já teve e perdeu. Isso mudaria a leitura de Joy Boy, das Armas Ancestrais e até da própria One Piece.</p><h3>Por que faz sentido</h3><ul><li>O Governo Mundial reage de forma desproporcional a informação, não só a poder bruto.</li><li>Vegapunk fala como quem está completando um quebra-cabeça antigo.</li><li>O tom do arco mistura ciência e mito — exatamente a marca do final game de Oda.</li></ul><p>É só uma teoria… mas se acertar, o rewatch de Egghead vai doer de tão óbvio.</p>",
       "cover": "https://picsum.photos/seed/onepiece/1200/630",
       "category": "teorias",
-      "tags": ["one piece", "egghead", "teoria", "oda"],
+      "tags": [
+        "one piece",
+        "egghead",
+        "teoria",
+        "oda"
+      ],
       "date": "2026-07-04",
       "author": "AniVerse",
-      "featured": true,
+      "featured": false,
       "popular": true,
       "type": "anime"
     },
@@ -66,7 +128,12 @@
       "content": "<p><strong>Chainsaw Man</strong> no mangá nunca foi confortável — e o arco atual reforça isso com elegância cruel.</p><p>Tatsuki Fujimoto continua misturando absurdo, violência e momentos de silêncio emocional que poucos autores conseguem equilibrar.</p><h3>Leitura da fase atual</h3><p>Em vez de só escalar poder, a obra escala <em>consequência</em>. Relacionamentos ficam mais frágeis, o humor fica mais ácido e o horror mais íntimo.</p><h3>Vale acompanhar semanalmente?</h3><p>Sim, se você topa ser surpreendido. Não, se busca um shounen de progressão linear e final feliz garantido.</p><p><strong>Recomendação:</strong> leia com paciência. Fujimoto recompensa quem confia no ritmo dele.</p>",
       "cover": "https://picsum.photos/seed/chainsaw/1200/630",
       "category": "mangas",
-      "tags": ["chainsaw man", "mangá", "fujimoto", "seinen"],
+      "tags": [
+        "chainsaw man",
+        "mangá",
+        "fujimoto",
+        "seinen"
+      ],
       "date": "2026-07-02",
       "author": "AniVerse",
       "featured": false,
@@ -81,7 +148,12 @@
       "content": "<p>Toda temporada chega com dezenas de títulos. Quase ninguém consegue ver tudo — e nem precisa.</p><p>Neste guia da <strong>temporada de verão 2026</strong>, separamos prioridades por perfil de fã.</p><h3>Imperdíveis</h3><ul><li>Sequências de grandes hits (se você já está investido emocionalmente, continue).</li><li>Um ou dois originais com premissa forte e estúdio confiável.</li></ul><h3>Apostas interessantes</h3><p>Fique de olho em adaptações de light novels menos badaladas: às vezes o “anime da temporada” nasce fora do hype inicial.</p><h3>Pode pular (por enquanto)</h3><p>Clones genéricos de isekai sem diferencial de tom, elenco ou worldbuilding. Se o trailer não te diz nada em 15 segundos, a culpa não é sua.</p><p>Marque este post e volte depois do first impressions da primeira semana — atualizaremos as notas.</p>",
       "cover": "https://picsum.photos/seed/summer2026/1200/630",
       "category": "noticias",
-      "tags": ["temporada", "guia", "verão 2026", "lançamentos"],
+      "tags": [
+        "temporada",
+        "guia",
+        "verão 2026",
+        "lançamentos"
+      ],
       "date": "2026-06-28",
       "author": "AniVerse",
       "featured": false,
@@ -96,7 +168,12 @@
       "content": "<p><strong>Dandadan</strong> parece uma colagem impossível: alienígenas, espíritos, romance adolescente e gags de mangá shounen. No papel, deveria falhar. Na tela, vira vício.</p><h3>A química é o motor</h3><p>Momo e Okarun carregam o show. Mesmo nas sequências mais loucas, o vínculo entre os dois ancora o espectador.</p><h3>Caos com direção</h3><p>O absurdo funciona porque existe regra emocional por baixo. Quando a cena vira meme, ainda há stakes — medo, vergonha, afeto, coragem.</p><h3>Vale para quem?</h3><p>Para quem gosta de energia alta, romance slow-burn e ação criativa. Se prefere drama minimalista, pode achar barulhento demais — e tudo bem.</p><p>No AniVerse, Dandadan entra na lista de “anime que define a década” com chance real.</p>",
       "cover": "https://picsum.photos/seed/dandadan/1200/630",
       "category": "reviews",
-      "tags": ["dandadan", "review", "romance", "sobrenatural"],
+      "tags": [
+        "dandadan",
+        "review",
+        "romance",
+        "sobrenatural"
+      ],
       "date": "2026-06-25",
       "author": "AniVerse",
       "featured": false,
@@ -111,7 +188,12 @@
       "content": "<p>Tem episódio de <strong>Demon Slayer</strong> que existe para avançar trama. Tem episódio que existe para virar wallpaper vivo. Este é o segundo tipo — com alma.</p><h3>Direção de arte</h3><p>Cenários, iluminação e partículas de efeito não são enfeite: guiam o olhar e marcam o ritmo da luta.</p><h3>Emoção sem discurso longo</h3><p>A Ufotable confia em rosto, silêncio e música. Quando o diálogo entra, ele pesa.</p><p>Se você só “ouve falar” que Demon Slayer é bonito, assista este episódio com fone e tela grande. O hype, desta vez, é merecido.</p>",
       "cover": "https://picsum.photos/seed/demonslayer/1200/630",
       "category": "episodios",
-      "tags": ["demon slayer", "ufotable", "episódio", "animação"],
+      "tags": [
+        "demon slayer",
+        "ufotable",
+        "episódio",
+        "animação"
+      ],
       "date": "2026-06-20",
       "author": "AniVerse",
       "featured": false,
@@ -126,7 +208,12 @@
       "content": "<p>Quer começar a ler mangá, mas trava na escolha? Esta lista é para você.</p><ol><li><strong>Chainsaw Man</strong> — ritmo moderno, arcos fechados o bastante para viciar.</li><li><strong>Spy x Family</strong> — leve, engraçado, perfeito para criar hábito de leitura.</li><li><strong>Frieren</strong> — calmo, emocionante, com arte limpa.</li><li><strong>Kaiju No. 8</strong> — ação acessível se você vem de shounen clássico.</li><li><strong>Blue Lock</strong> — esportes com ego e tensão de anime de luta.</li></ol><p>Dica AniVerse: leia 1 capítulo por dia no mesmo horário. Hábito vence catálogo.</p>",
       "cover": "https://picsum.photos/seed/mangalist/1200/630",
       "category": "mangas",
-      "tags": ["mangá", "iniciantes", "lista", "recomendação"],
+      "tags": [
+        "mangá",
+        "iniciantes",
+        "lista",
+        "recomendação"
+      ],
       "date": "2026-06-15",
       "author": "AniVerse",
       "featured": false,
