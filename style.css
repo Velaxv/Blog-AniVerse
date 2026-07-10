@@ -839,28 +839,34 @@ header > .header-container > #newsletter-widget {
 /* ---------- Engagement (likes / views) ---------- */
 .engagement-mount {
   margin-top: 1.15rem;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  min-height: 44px;
 }
 
 .engagement-bar {
-  display: inline-flex;
+  display: inline-flex !important;
   align-items: stretch;
   gap: 0.55rem;
   flex-wrap: wrap;
+  visibility: visible !important;
 }
 
 .eng-stat,
 .eng-like-btn {
-  display: inline-flex;
+  display: inline-flex !important;
   align-items: center;
   gap: 0.4rem;
-  padding: 0.55rem 0.95rem;
+  padding: 0.6rem 1rem;
   border-radius: 999px;
   border: 1px solid var(--border);
-  background: rgba(8, 7, 15, 0.45);
+  background: rgba(8, 7, 15, 0.55);
   color: var(--text);
   font-family: var(--font);
   font-size: 0.9rem;
   font-weight: 600;
+  line-height: 1.2;
 }
 
 .eng-like-btn {
@@ -869,14 +875,15 @@ header > .header-container > #newsletter-widget {
 }
 
 .eng-like-btn:hover {
-  border-color: rgba(240, 164, 110, 0.45);
+  border-color: rgba(240, 164, 110, 0.55);
   background: var(--accent-soft);
   transform: translateY(-1px);
+  color: #fff;
 }
 
 .eng-like-btn.is-liked {
-  border-color: rgba(253, 121, 168, 0.5);
-  background: rgba(253, 121, 168, 0.14);
+  border-color: rgba(253, 121, 168, 0.55);
+  background: rgba(253, 121, 168, 0.18);
 }
 
 .eng-like-btn:disabled {
@@ -885,13 +892,14 @@ header > .header-container > #newsletter-widget {
 }
 
 .eng-icon {
-  font-size: 1rem;
+  font-size: 1.05rem;
   line-height: 1;
 }
 
 .eng-count {
   font-variant-numeric: tabular-nums;
   min-width: 1ch;
+  color: #fff;
 }
 
 .eng-label {
@@ -910,8 +918,9 @@ header > .header-container > #newsletter-widget {
   padding: 1.25rem 1.15rem;
   border-radius: var(--radius);
   border: 1px solid var(--border);
-  background: linear-gradient(135deg, rgba(124, 108, 240, 0.12), rgba(240, 164, 110, 0.08));
+  background: linear-gradient(135deg, rgba(124, 108, 240, 0.16), rgba(240, 164, 110, 0.1));
   text-align: center;
+  display: block !important;
 }
 
 .engagement-footer-label {
@@ -923,8 +932,30 @@ header > .header-container > #newsletter-widget {
 
 .engagement-footer .engagement-mount {
   margin-top: 0;
-  display: flex;
+  display: flex !important;
   justify-content: center;
+}
+
+/* Stats nos cards (home / listas) */
+.card-stats {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-top: 0.55rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.card-stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.card-stat [data-eng] {
+  color: #d9d2f0;
+  font-variant-numeric: tabular-nums;
 }
 
 .post-meta-line {

@@ -27,13 +27,21 @@ const app = {
   },
 
   detectPage() {
-    const file = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
-    if (file === '' || file === 'index.html') return 'home';
-    if (file.startsWith('post')) return 'post';
-    if (file.startsWith('category')) return 'category';
-    if (file.startsWith('episodes')) return 'episodes';
-    if (file.startsWith('mangas')) return 'mangas';
-    if (file.startsWith('about')) return 'about';
+    const raw = (window.location.pathname.split('/').pop() || '').toLowerCase();
+    const file = raw.replace(/\.html$/, '') || 'index';
+    if (file === '' || file === 'index' || file === 'home') return 'home';
+    if (file === 'post' || file.startsWith('post')) return 'post';
+    if (file === 'category' || file.startsWith('category')) return 'category';
+    if (file === 'episodes' || file.startsWith('episode')) return 'episodes';
+    if (file === 'mangas' || file.startsWith('manga')) return 'mangas';
+    if (file === 'about') return 'about';
+    // Netlify pretty URL edge cases
+    const path = window.location.pathname.toLowerCase();
+    if (path.includes('/post')) return 'post';
+    if (path.includes('/category')) return 'category';
+    if (path.includes('/episodes')) return 'episodes';
+    if (path.includes('/mangas')) return 'mangas';
+    if (path.includes('/about')) return 'about';
     return 'home';
   },
 
@@ -82,13 +90,19 @@ const app = {
     };
 
     filters.activeCategory = 'all';
+    const renderAndHydrate = (list) => {
+      render(list);
+      if (window.engagement) {
+        engagement.hydrateCards(grid).catch(() => {});
+      }
+    };
     filters.init(() => {
       const base = filters.activeCategory === 'all'
         ? feedPosts
         : posts.filter((p) => p.category === filters.activeCategory);
-      render(filters.apply(base.length ? base : posts));
+      renderAndHydrate(filters.apply(base.length ? base : posts));
     });
-    render(feedPosts);
+    renderAndHydrate(feedPosts);
 
     if (filterBar && !filterBar.hidden) {
       filterBar.querySelectorAll('.cat-chip').forEach((chip) => {
@@ -102,9 +116,14 @@ const app = {
             filters.activeCategory === 'all'
               ? feedPosts
               : posts.filter((p) => p.category === filters.activeCategory);
-          render(list);
+          renderAndHydrate(list);
         });
       });
+    }
+
+    // Contadores também no card do hero (se existir feed vazio, hidrata popular)
+    if (window.engagement) {
+      engagement.hydrateCards(document).catch(() => {});
     }
 
     const catSide = document.getElementById('categories-sidebar');
@@ -145,18 +164,15 @@ const app = {
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) metaDesc.setAttribute('content', post.excerpt);
 
-    // Curtidas + visualizações (topo conta view; rodapé só sincroniza UI)
+    // Curtidas + visualizações (UI já no HTML; aqui só hidrata contadores e view)
     if (window.engagement) {
-      const top = document.getElementById('engagement-top');
-      const bottom = document.getElementById('engagement-bottom');
-      if (top) {
-        engagement.mount(top, post.id).then((stats) => {
-          if (bottom && stats) {
-            bottom.innerHTML = engagement.barHTML(post.id, stats);
-            engagement.bind(bottom, post.id);
-            engagement.updateAll(post.id, stats);
-          }
+      try {
+        engagement.bindLikes(container);
+        engagement.attachToPost(post.id).catch((err) => {
+          console.error('engagement attach failed', err);
         });
+      } catch (err) {
+        console.error('engagement init failed', err);
       }
     }
 
@@ -181,6 +197,7 @@ const app = {
       } else {
         if (relatedSection) relatedSection.hidden = false;
         related.innerHTML = final.map((p) => templates.postCard(p)).join('');
+        if (window.engagement) engagement.hydrateCards(related).catch(() => {});
       }
     }
   },
@@ -217,6 +234,7 @@ const app = {
       grid.innerHTML = list.length
         ? list.map((p) => templates.postCard(p)).join('')
         : templates.emptyState('Nenhum post encontrado com esses filtros.');
+      if (window.engagement) engagement.hydrateCards(grid).catch(() => {});
     }
 
     filters.init(() => {
@@ -225,6 +243,7 @@ const app = {
         grid.innerHTML = next.length
           ? next.map((p) => templates.postCard(p)).join('')
           : templates.emptyState('Nenhum post encontrado.');
+        if (window.engagement) engagement.hydrateCards(grid).catch(() => {});
       }
     });
 
@@ -242,6 +261,7 @@ const app = {
       grid.innerHTML = posts.length
         ? posts.map((p) => templates.postCard(p)).join('')
         : templates.emptyState('Em breve novos conteúdos por aqui.');
+      if (window.engagement) engagement.hydrateCards(grid).catch(() => {});
     }
 
     const popular = await AniAPI.getPopular(5);

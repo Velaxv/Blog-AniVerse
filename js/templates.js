@@ -14,6 +14,13 @@ const templates = {
   },
 
   postCard(post) {
+    const statsHtml =
+      window.engagement && typeof engagement.cardStatsHTML === 'function'
+        ? engagement.cardStatsHTML(post.id)
+        : `<div class="card-stats" data-eng-card="${this.escape(post.id)}">
+            <span class="card-stat">👁 <span data-eng="views">0</span></span>
+            <span class="card-stat">❤️ <span data-eng="likes">0</span></span>
+          </div>`;
     return `
       <article class="post-card" data-id="${post.id}" data-category="${post.category}">
         <a href="post.html?slug=${encodeURIComponent(post.slug)}" class="post-card-link">
@@ -25,6 +32,7 @@ const templates = {
             <time class="post-date" datetime="${post.date}">${utils.formatDate(post.date)}</time>
             <h3 class="post-card-title">${this.escape(post.title)}</h3>
             <p class="post-card-excerpt">${this.escape(post.excerpt)}</p>
+            ${statsHtml}
             <span class="post-card-cta">Ler artigo →</span>
           </div>
         </a>
@@ -144,6 +152,18 @@ const templates = {
   },
 
   postFull(post, categoryLabel) {
+    // Barra já renderizada no HTML (não depende de mount assíncrono para aparecer)
+    const bar =
+      window.engagement && typeof engagement.barHTML === 'function'
+        ? engagement.barHTML(post.id)
+        : `<div class="engagement-bar" data-post-id="${this.escape(post.id)}">
+            <div class="eng-stat"><span class="eng-icon">👁</span><span class="eng-count" data-eng="views">0</span><span class="eng-label">views</span></div>
+            <button type="button" class="eng-like-btn" data-eng-like data-post-id="${this.escape(post.id)}">
+              <span class="eng-icon eng-heart">🤍</span>
+              <span class="eng-count" data-eng="likes">0</span>
+              <span class="eng-label">curtir</span>
+            </button>
+          </div>`;
     return `
       <article class="post-full" data-post-id="${this.escape(post.id)}">
         <header class="post-full-header">
@@ -154,7 +174,7 @@ const templates = {
           </div>
           <h1 class="post-full-title">${this.escape(post.title)}</h1>
           <p class="post-full-excerpt">${this.escape(post.excerpt)}</p>
-          <div class="engagement-mount" id="engagement-top" data-post-id="${this.escape(post.id)}"></div>
+          <div class="engagement-mount" id="engagement-top" data-post-id="${this.escape(post.id)}">${bar}</div>
         </header>
         <div class="post-full-cover">
           <img src="${post.cover}" alt="${this.escape(post.title)}" width="1200" height="630">
@@ -167,7 +187,7 @@ const templates = {
         </footer>
         <div class="engagement-footer">
           <p class="engagement-footer-label">Gostou do artigo?</p>
-          <div class="engagement-mount" id="engagement-bottom" data-post-id="${this.escape(post.id)}"></div>
+          <div class="engagement-mount" id="engagement-bottom" data-post-id="${this.escape(post.id)}">${bar}</div>
         </div>
       </article>
     `;
