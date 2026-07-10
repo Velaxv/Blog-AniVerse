@@ -1,0 +1,18 @@
+{
+  "name": "aniverse-blog",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AniVerse — blog + automação de posts",
+  "type": "module",
+  "scripts": {
+    "generate": "node scripts/generate-draft.mjs",
+    "approve": "node scripts/approve-draft.mjs",
+    "approve:all": "node scripts/approve-draft.mjs --all",
+    "publish": "node scripts/publish-scheduled.mjs",
+    "pipeline": "node scripts/list-pipeline.mjs",
+    "slot": "node scripts/next-slot.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

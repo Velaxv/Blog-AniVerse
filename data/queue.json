@@ -1,0 +1,36 @@
+{
+  "timezone": "America/Sao_Paulo",
+  "publishSlots": ["09:00", "15:00", "19:00"],
+  "items": [
+    {
+      "id": "one-piece-cap3-zoro",
+      "topic": "One Piece Capítulo 3: o primeiro encontro com Roronoa Zoro em Shells Town",
+      "category": "mangas",
+      "type": "manga",
+      "series": "One Piece",
+      "notes": "Continuar a linha dos capítulos 1 e 2. Foco em Zoro, marinha local, honra e o início da tripulação. Tom de análise narrativa como os posts anteriores.",
+      "tags": ["one piece", "zoro", "capítulo 3", "análise", "mangá"],
+      "priority": 1
+    },
+    {
+      "id": "one-piece-cap4-koby-marine",
+      "topic": "One Piece Capítulo 4: a despedida de Koby e o peso de escolher o próprio caminho",
+      "category": "mangas",
+      "type": "manga",
+      "series": "One Piece",
+      "notes": "Koby parte para a marinha; Luffy segue. Temas de sonho, caminhos opostos e amizade.",
+      "tags": ["one piece", "koby", "capítulo 4", "análise"],
+      "priority": 2
+    },
+    {
+      "id": "dandadan-fenomeno",
+      "topic": "Por que Dandadan funciona: caos, romance e identidade de uma geração",
+      "category": "reviews",
+      "type": "anime",
+      "series": "Dandadan",
+      "notes": "Review acessível, sem spoilers pesados. Público BR fã de anime.",
+      "tags": ["dandadan", "review", "anime"],
+      "priority": 3
+    }
+  ]
+}

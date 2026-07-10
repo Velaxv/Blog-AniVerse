@@ -1,0 +1,40 @@
+# Publica drafts agendados nos horários ~09:00, 15:00 e 19:00 (America/Sao_Paulo)
+# BRT = UTC-3 → cron em 12:05, 18:05 e 22:05 UTC
+name: Publish scheduled posts
+
+on:
+  schedule:
+    - cron: '5 12 * * *'  # 09:05 BRT
+    - cron: '5 18 * * *'  # 15:05 BRT
+    - cron: '5 22 * * *'  # 19:05 BRT
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run publisher
+        run: node scripts/publish-scheduled.mjs
+
+      - name: Commit & push if changed
+        run: |
+          if git diff --quiet && git diff --cached --quiet; then
+            echo "Nenhuma mudança para commitar."
+            exit 0
+          fi
+          git config user.name "AniVerse Bot"
+          git config user.email "bot@aniverse.local"
+          git add data/posts.json data/drafts
+          git commit -m "chore(publish): posts agendados [skip ci]" || exit 0
+          git push

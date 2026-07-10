@@ -1,0 +1,66 @@
+# Gera rascunho a partir da fila (manual ou agendado).
+# Coloque XAI_API_KEY ou OPENAI_API_KEY em Settings → Secrets.
+name: Generate AI draft
+
+on:
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: 'Tema avulso (opcional; se vazio usa a fila)'
+        required: false
+        default: ''
+      keep_queue:
+        description: 'Manter item na fila? (true/false)'
+        required: false
+        default: 'false'
+  # Opcional: rascunhar todo dia às 08:00 BRT (11:00 UTC) se houver fila
+  schedule:
+    - cron: '0 11 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate draft
+        env:
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          XAI_MODEL: ${{ secrets.XAI_MODEL }}
+          OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
+          IMAGE_ENGINE: ${{ secrets.IMAGE_ENGINE }}
+        run: |
+          set -e
+          ARGS=""
+          TOPIC="${{ github.event.inputs.topic }}"
+          KEEP="${{ github.event.inputs.keep_queue }}"
+          if [ -n "$TOPIC" ]; then
+            ARGS="--topic \"$TOPIC\""
+          fi
+          if [ "$KEEP" = "true" ]; then
+            ARGS="$ARGS --keep-queue"
+          fi
+          eval node scripts/generate-draft.mjs $ARGS
+
+      - name: Commit draft & images
+        run: |
+          if git diff --quiet && git diff --cached --quiet && [ -z "$(git ls-files --others --exclude-standard)" ]; then
+            echo "Nada gerado."
+            exit 0
+          fi
+          git config user.name "AniVerse Bot"
+          git config user.email "bot@aniverse.local"
+          git add data/drafts data/queue.json images/posts
+          git status
+          git commit -m "chore(draft): rascunho IA para revisão" || exit 0
+          git push
