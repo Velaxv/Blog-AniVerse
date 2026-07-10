@@ -145,6 +145,21 @@ const app = {
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) metaDesc.setAttribute('content', post.excerpt);
 
+    // Curtidas + visualizações (topo conta view; rodapé só sincroniza UI)
+    if (window.engagement) {
+      const top = document.getElementById('engagement-top');
+      const bottom = document.getElementById('engagement-bottom');
+      if (top) {
+        engagement.mount(top, post.id).then((stats) => {
+          if (bottom && stats) {
+            bottom.innerHTML = engagement.barHTML(post.id, stats);
+            engagement.bind(bottom, post.id);
+            engagement.updateAll(post.id, stats);
+          }
+        });
+      }
+    }
+
     const popSide = document.getElementById('popular-sidebar');
     if (popSide) popSide.innerHTML = templates.popularSidebar(popular);
 

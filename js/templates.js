@@ -145,7 +145,7 @@ const templates = {
 
   postFull(post, categoryLabel) {
     return `
-      <article class="post-full">
+      <article class="post-full" data-post-id="${this.escape(post.id)}">
         <header class="post-full-header">
           <div class="post-meta">
             <span class="post-badge">${this.escape(categoryLabel || this.catLabel(post.category))}</span>
@@ -154,6 +154,7 @@ const templates = {
           </div>
           <h1 class="post-full-title">${this.escape(post.title)}</h1>
           <p class="post-full-excerpt">${this.escape(post.excerpt)}</p>
+          <div class="engagement-mount" id="engagement-top" data-post-id="${this.escape(post.id)}"></div>
         </header>
         <div class="post-full-cover">
           <img src="${post.cover}" alt="${this.escape(post.title)}" width="1200" height="630">
@@ -164,6 +165,10 @@ const templates = {
         <footer class="post-tags">
           ${(post.tags || []).map((t) => `<span class="tag">#${this.escape(t)}</span>`).join('')}
         </footer>
+        <div class="engagement-footer">
+          <p class="engagement-footer-label">Gostou do artigo?</p>
+          <div class="engagement-mount" id="engagement-bottom" data-post-id="${this.escape(post.id)}"></div>
+        </div>
       </article>
     `;
   },
