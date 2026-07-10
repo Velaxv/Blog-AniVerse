@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre - AniVerse</title>
-    <meta name="description" content="Conheça o AniVerse: blog de anime e mangá com reviews, análises e teorias.">
-    <link rel="canonical" href="https://aniverseanime.netlify.app/about.html">
+    <title>Post - AniVerse</title>
+    <meta name="description" content="Leia no AniVerse.">
+    <link rel="canonical" href="https://aniverseanime.netlify.app/post.html">
     <meta name="theme-color" content="#6c5ce7">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌌</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://picsum.photos">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body data-page="about">
+<body data-page="post">
     <header class="header">
         <div class="header-container">
             <a href="index.html" class="logo"><span class="logo-icon">🌌</span><span class="logo-text">AniVerse</span></a>
@@ -21,7 +22,7 @@
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="episodes.html" class="nav-link">Episódios</a>
                 <a href="mangas.html" class="nav-link">Mangás</a>
-                <a href="about.html" class="nav-link active">Sobre</a>
+                <a href="about.html" class="nav-link">Sobre</a>
             </nav>
             <div class="search-container">
                 <input type="text" id="search-input" placeholder="Buscar anime, manga..." class="search-input" aria-label="Buscar">
@@ -32,31 +33,22 @@
     </header>
 
     <main class="main-container">
-        <article class="about-card">
-            <h1>🌌 Sobre o AniVerse</h1>
-            <p>
-                O <strong>AniVerse</strong> é um blog feito por fãs, para fãs — um canto na internet para reviews honestos,
-                análises de episódios, teorias e guias do universo de animes e mangás.
-            </p>
-            <p>
-                Nosso objetivo é simples: ajudar você a descobrir o que vale o tempo de tela (e o que pode pular),
-                com texto claro, opinião fundamentada e zero enrolação.
-            </p>
-            <div class="about-features">
-                <div class="feature-pill">⭐ Reviews com nota e contexto</div>
-                <div class="feature-pill">🎬 Análises de episódios</div>
-                <div class="feature-pill">📖 Cobertura de mangás</div>
-                <div class="feature-pill">🔮 Teorias e discussões</div>
+        <p style="margin: 0 0 1rem;"><a href="index.html">← Voltar</a></p>
+        <div class="post-layout">
+            <div>
+                <div id="post-container"></div>
+                <section class="related-section">
+                    <div class="section-header">
+                        <h2 class="section-title">📚 Relacionados</h2>
+                    </div>
+                    <div class="posts-grid" id="related-grid"></div>
+                </section>
             </div>
-            <p style="margin-top: 1.75rem;">
-                O site é atualizado via repositório no GitHub e publicado na Netlify.
-                Quer receber novidades? Assine a newsletter na home.
-            </p>
-            <p>
-                <a class="btn-primary" href="index.html" style="margin-top: 0.5rem;">← Voltar aos posts</a>
-            </p>
-        </article>
-        <div style="max-width: 400px; margin-top: 1.5rem;" id="newsletter-widget"></div>
+            <aside class="sidebar">
+                <div id="popular-sidebar"></div>
+                <div id="newsletter-widget"></div>
+            </aside>
+        </div>
     </main>
 
     <footer class="footer">
