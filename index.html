@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AniVerse - Seu Universo Anime | Reviews, Análises e Novidades</title>
+    <meta name="description" content="Seu universo anime em um só lugar. Reviews profundos, análises de episódios, teorias e as últimas novidades do mundo dos animes e mangás.">
+    <meta name="keywords" content="anime, mangá, reviews, análises, animes novos, shounen, isekai, anime brasil, blog de anime">
+    <meta name="author" content="AniVerse">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://aniverse.blog/index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aniverse.blog/">
+    <meta property="og:title" content="AniVerse - Seu Universo Anime">
+    <meta property="og:description" content="Reviews profundos, análises e as últimas novidades dos melhores animes e mangás.">
+    <meta property="og:image" content="https://picsum.photos/seed/aniverse/1200/630">
+    <meta property="og:site_name" content="AniVerse">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#6c5ce7">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌌</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://picsum.photos">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo"><span class="logo-icon">🌌</span><span class="logo-text">AniVerse</span></a>
+            <nav class="nav">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="episodes.html" class="nav-link">Episódios</a>
+                <a href="mangas.html" class="nav-link">Mangás</a>
+                <a href="about.html" class="nav-link">Sobre</a>
+            </nav>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Buscar anime, manga..." class="search-input">
+                <button id="search-btn" class="search-btn">🔍</button>
+            </div>
+            <div id="newsletter-widget">
+                              <h3>📧 Newsletter</h3>
+                              <p>Receba notificações de novos posts.</p>
+                              <form id="subscribe-form">
+                                <input type="email" id="subscribe-email" placeholder="seu@email.com" required>
+                                <button type="submit">Assinar</button>
+                              </form>
+                              <p id="subscribe-msg"></p>
+                            </div>
+            <button class="menu-toggle">☰</button>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <section class="hero" id="hero-post"></section>
+        <div id="filter-bar"></div>
+        <div class="content-wrapper">
+            <section class="posts-feed">
+                <div class="section-header">
+                    <h2 class="section-title">🔥 Posts Recentes</h2>
+                    <a href="category.html?cat=all" class="see-all">Ver todos →</a>
+                </div>
+                <div class="posts-grid" id="posts-grid"></div>
+            </section>
+            <aside class="sidebar">
+                <div id="categories-sidebar"></div>
+                <div id="popular-sidebar"></div>
+                <div id="newsletter-widget"></div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="logo-icon">🌌</span><span class="logo-text">AniVerse</span>
+                <p class="footer-tagline">Seu universo anime em um só lugar</p>
+            </div>
+            <div class="footer-links">
+                <a href="about.html">Sobre</a><a href="#">Contato</a><a href="#">Privacidade</a><a href="#">Termos</a>
+            </div>
+            <p class="footer-copy">© 2026 AniVerse. Feito com 💜 por fãs, para fãs.</p>
+        </div>
+    </footer>
+
+    <div id="auth-modal"></div>
+    <button class="scroll-top" id="scroll-top" onclick="utils.scrollToTop()">↑</button>
+    <div id="toast-container"></div>
+
+    <script src="js/api.js"></script>
+    <script src="js/templates.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
