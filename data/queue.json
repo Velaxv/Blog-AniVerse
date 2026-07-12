@@ -7,21 +7,6 @@
   ],
   "items": [
     {
-      "id": "one-piece-cap4-koby-marine",
-      "topic": "One Piece Capítulo 4: a despedida de Koby e o peso de escolher o próprio caminho",
-      "category": "mangas",
-      "type": "manga",
-      "series": "One Piece",
-      "notes": "Koby parte para a marinha; Luffy segue. Temas de sonho, caminhos opostos e amizade.",
-      "tags": [
-        "one piece",
-        "koby",
-        "capítulo 4",
-        "análise"
-      ],
-      "priority": 2
-    },
-    {
       "id": "dandadan-fenomeno",
       "topic": "Por que Dandadan funciona: caos, romance e identidade de uma geração",
       "category": "reviews",
