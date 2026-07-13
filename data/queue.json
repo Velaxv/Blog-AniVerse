@@ -5,20 +5,5 @@
     "15:00",
     "19:00"
   ],
-  "items": [
-    {
-      "id": "dandadan-fenomeno",
-      "topic": "Por que Dandadan funciona: caos, romance e identidade de uma geração",
-      "category": "reviews",
-      "type": "anime",
-      "series": "Dandadan",
-      "notes": "Review acessível, sem spoilers pesados. Público BR fã de anime.",
-      "tags": [
-        "dandadan",
-        "review",
-        "anime"
-      ],
-      "priority": 3
-    }
-  ]
+  "items": []
 }
